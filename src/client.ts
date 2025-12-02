@@ -133,12 +133,12 @@ export async function aqs<T>(
 }
 
 /**
- * Get default credentials from environment variables
+ * Get default credentials from environment variables or hardcoded defaults
  */
 export function getDefaultCredentials(): { email?: string; key?: string } {
   return {
-    email: process.env.AQS_EMAIL,
-    key: process.env.AQS_API_KEY,
+    email: process.env.AQS_EMAIL || '${AQS_EMAIL}',
+    key: process.env.AQS_API_KEY || 'process.env.AQS_API_KEY',
   };
 }
 

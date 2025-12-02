@@ -18,7 +18,7 @@ export declare function validateDateFormat(date: string, fieldName: string): voi
  */
 export declare function aqs<T>(endpoint: string, params: Record<string, string>): Promise<AqsResponse<T>>;
 /**
- * Get default credentials from environment variables
+ * Get default credentials from environment variables or hardcoded defaults
  */
 export declare function getDefaultCredentials(): {
     email?: string;
