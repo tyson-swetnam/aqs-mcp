@@ -138,7 +138,7 @@ export async function aqs<T>(
 export function getDefaultCredentials(): { email?: string; key?: string } {
   return {
     email: process.env.AQS_EMAIL || '${AQS_EMAIL}',
-    key: process.env.AQS_API_KEY || 'process.env.AQS_API_KEY',
+    key: process.env.AQS_API_KEY || '${AQS_API_KEY}',
   };
 }
 
